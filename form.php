@@ -1,11 +1,28 @@
 <?php
 if(isset($_POST['submit'])){
+
+    $name = array("alexwawo", "maria", "johndoe", "janedoe", "nathan");
+
+	$minumum = 5;
+	$maximum = 10;
+
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    echo $username;
-    echo "<br />";
-    echo $password;	
+    if(strlen($username) < $minumum){
+    	echo "Username harus memiliki panjang 5 atau lebih";
+    }
+	
+	if(strlen($username) > $maximum){
+		echo "username tidak boleh lebih panjang dari 10";
+	}
+
+	if(!in_array($username, $name)){
+		echo "Maaf, akses ditolak";
+	}else{
+		echo "Selamat datang";
+	}
+
 }
 ?>
 
