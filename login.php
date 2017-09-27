@@ -3,8 +3,13 @@ if(isset($_POST['submit'])){
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	echo $username;
-	echo $password;
+    $koneksi = mysqli_connect("localhost", "root", "", "belajar_loginapp");
+
+    if($koneksi){
+        echo "we're connected";
+    }else{
+    	echo "Connection failed";
+    }
 }
 ?>
 
