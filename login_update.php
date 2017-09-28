@@ -1,3 +1,6 @@
+<?php include "db.php"; ?>
+<?php include "function.php"; ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +22,9 @@
 			</div>
 			<div class="form-group">
 				<select name="id" class="form-control">
-			        <optional value="1">1</optional>
+					<?php
+					showAllUserId();
+					?>
 			    </select>
 			</div>
 			<input type="submit" name="submit" value="UPDATE" class="btn btn-primary" />
