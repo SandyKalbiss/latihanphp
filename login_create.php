@@ -10,7 +10,15 @@ if(isset($_POST['submit'])){
     }else{
     	echo "Connection failed";
     }
- }
+
+    $query = "INSERT INTO users (username, password,)
+             VALUES ('$username', '$password')";
+    $result =mysqli_query($koneksi, $query);
+             
+    if(!$result){
+        die('Query Failed ' . mysqli_error($koneksi));
+    }
+}
 ?>
 
 <!DOCTYPE html>
