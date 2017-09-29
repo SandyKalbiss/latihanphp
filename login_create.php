@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     	echo "Connection failed";
     }
 
-    $query = "INSERT INTO users (username, password,)
+    $query = "INSERT INTO users (username, password)
              VALUES ('$username', '$password')";
     $result =mysqli_query($koneksi, $query);
              
