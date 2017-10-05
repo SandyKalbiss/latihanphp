@@ -4,12 +4,13 @@ include("db.php");
 
 if($_GET['action'] == "add"){
 	// 2. Query
-	$query  = "INSERT INTO mahasiswa (nim, nama, jurusan)
-				VALUES('$_POST[nim]','$_POST[nama]','$_POST[jurusan]')";
+	$query  = "INSERT INTO mahasiswa (id, nim, nama, jurusan)
+				VALUES('$_POST[id]','$_POST[nim]','$_POST[nama]','$_POST[jurusan]')";
 }else if($_GET['action'] == "edit"){
 	// 2. Query
 	$query = "UPDATE mahasiswa
-			SET nim = '$_POST[nim]'
+			SET id  = '$_POST[id]'
+				nim = '$_POST[nim]'
 				namama = '$_POST[nama]'
 				jurusan = '$_POST[jurusan]'
 				WHERE id = $_POST[id]";

@@ -9,9 +9,9 @@ if($_GET['action'] == "add"){
 }else if($_GET['action'] == "edit"){
 	// 2. Query
 	$query = "UPDATE Dosen
-			SET nim = '$_POST[id]'
-				namama = '$_POST[kode_dosen]'
-				jurusan = '$_POST[nama]'
+			SET id = '$_POST[id]'
+				kode_dosen = '$_POST[kode_dosen]'
+				nama = '$_POST[nama]'
 				WHERE id = $_POST[id]";
 }else if($_GET['action'] == "delete"){
 	$query = "DELETE FROM dosen

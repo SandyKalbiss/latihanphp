@@ -9,12 +9,11 @@ $hasil = mysqli_query($koneksi, $query);
 
 <h1>Data Dosen</h1>
 <a href="template.php?page=formdosen&action=add">Tambah Data</a>
-<table border="1">
 <thead>
 	<tr>
-		<th>Id</th>
-		<th>Kode Dosen</th>
-		<th>Nama</th>
+		<th>id</th>
+		<th>kode Dosen</th>
+		<th>nama_dosen</th>
 	</tr>
 </thead>
 <tbody>
@@ -24,7 +23,7 @@ $hasil = mysqli_query($koneksi, $query);
 	<tr>
 		<td><?php echo $row['id']; ?> </td>
 		<td><?php echo $row['kode_dosen']; ?> </td>
-		<td><?php echo $row['nama']; ?> </td>
+		<td><?php echo $row['nama_dosen']; ?> </td>
 		<td>
 			<a href="template.php?page=formdosen&id=<?php echo $row['id'];?>&action=edit">Edit</a>
 			<a href="proses_dosen.php?action=delete&id=<?php echo $row['id'];?>">Delete</a>

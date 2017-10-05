@@ -12,7 +12,7 @@ $hasil = mysqli_query($koneksi, $query);
 <table>
 <thead>
 	<tr>
-		<th>No.</th>
+		<th>Id</th>
 		<th>NIM</th>
 		<th>Nama</th>
 		<th>Jurusan</th>
