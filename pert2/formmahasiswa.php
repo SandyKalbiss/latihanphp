@@ -15,10 +15,10 @@ if($_GET['action'] == "edit"){
 }
 ?>
 <form action="proses_mhs.php?action=<?php echo $_GET['action']; ?>" method="post">
-	NIM:
+	NIM&nbsp&nbsp&nbsp&nbsp:
 	<input type="text" name="nim" value="<?php echo $row['nim']; ?>" />
 	<br />
-	Nama:
+	Nama&nbsp&nbsp:
 	<input type="text" name="nama" value="<?php echo $row['nama']; ?>" />
 	<br />
 	Jurusan:
