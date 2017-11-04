@@ -1,5 +1,8 @@
-<?php // filename: form_edit_kontak.php
+<?php // filename: form_tambah_kontak.php
 
+include("koneksi.php");
+$query = "SELECT * FROM kategori ";
+$hasil = mysqli_query($db, $query);
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +19,8 @@
 	</ul>
 </div>
 <div id="konten">
-	<h2>Edit Kontak</h2>
-	<form action="" method="post">
+	<h2>Tambah Kontak</h2>
+	<form action="prosses_tambah_kontak.php" method="post">
 		Nama:
 		<input type="text" name="nama" />
 		<br />
@@ -29,7 +32,9 @@
 		<br />
 		Kategori:
 		<select name="kategori">
-			<option value=""></option>
+		<?php while($row1 = mysqli_fetch_array($hasil)):;?>
+		<option value="<?php echo $row1[0]; ?>"> <?php echo $row1[1]; ?> </option>
+		<?php endwhile; ?>
 		</select>
 		<br />
 		<input type="submit" value="Simpan" />

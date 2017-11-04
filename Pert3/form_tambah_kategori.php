@@ -1,5 +1,5 @@
 <?php // filename: form_tambah_kategori.php
-	
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
 </div>
 <div id="konten">
 	<h2>Tambah Kategori</h2>
-	<form action="proses_tambah_kategori.php" method="post">
+	<form action="prosses_tambah_kategori.php" method="post">
 		Keterangan:
 		<input type="text" name="ket" />
 		<br />
